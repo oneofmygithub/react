@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <title>Class Component</title>
+<head>
+    <title>React Project</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>   
+    <div id="root"></div>
+    <script type="text/babel">     
+       const Lake = ({name})=><h1>{name}</h1>;
+        // const App=()=>(
+        //     <div>
+        //         <Lake name="Lake Tahoe" />
+        //         <Lake name="Seriel" />
+        //         <Lake name="Jackie" />
+        //     </div>
+        // );
+       
+       class App extends React.Component
+       {
+           render(){
+               return (
+                    <div>
+                     <Lake name="Lake Tahoe" />
+                     <Lake name="Seriel" />
+                     <Lake name="Jackie" />
+                 </div>
+               )
+           }
+       }
+        ReactDOM.render(
+        <App />,
+        document.getElementById("root")
+    );
+    
+    </script>
+</body>
+</html>
